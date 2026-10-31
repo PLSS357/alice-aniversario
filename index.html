@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17161b">
+  <meta name="description" content="Três minigames e uma surpresa de aniversário para Alice.">
+  <meta property="og:title" content="Aniversário da Alice">
+  <meta property="og:description" content="Três jogos. Uma mensagem no final.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%2317161b%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2245%22%20fill%3D%22%23f37b69%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22800%22%20text-anchor%3D%22middle%22%20font-size%3D%2245%22%3Ea.%3C/text%3E%3C/svg%3E%0A">
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+:root{--bg:#17161b;--bg-2:#211f27;--panel:#25232b;--panel-2:#2d2a34;--line:#45414b;--text:#f2ede5;--muted:#aaa3ac;--coral:#f37b69;--violet:#a88cf5;--mint:#a0d6bc;--shadow:0 24px 70px #09080b73;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font:16px/1.5 'DM Sans',Inter,ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#6f6271 .55px,transparent .55px);background-size:7px 7px;z-index:-1}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}button:focus-visible,input:focus-visible{outline:3px solid var(--violet);outline-offset:4px}::selection{background:var(--coral);color:var(--bg)}.container{width:min(1130px,calc(100% - 48px));margin:auto}.site-header{border-bottom:1px solid #ffffff18;background:rgba(23,22,27,.89);backdrop-filter:blur(16px);position:sticky;top:0;z-index:12}.nav-inner{min-height:77px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-family:'Space Grotesk',sans-serif;font-size:26px;letter-spacing:-1.5px;font-weight:700;color:var(--text);border:0;background:transparent;padding:0}.logo span{color:var(--coral)}.nav-right{display:flex;align-items:center;gap:14px}.progress-pill{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);padding:9px 13px;border-radius:50px;font-size:12px;color:var(--text);font-weight:700;letter-spacing:.03em}.progress-pill .dot{width:7px;height:7px;background:var(--coral);border-radius:50%}.subtle-btn{border:0;background:transparent;color:var(--muted);font-weight:700;padding:9px 6px}.subtle-btn:hover{color:var(--text)}.main{padding:0 0 80px}.hero{display:grid;grid-template-columns:1fr .82fr;gap:64px;align-items:center;min-height:530px;padding:72px 0 80px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--coral);text-transform:uppercase;font-size:12px;letter-spacing:.16em;font-weight:800}.eyebrow:before{content:"";width:23px;height:2px;background:currentColor}.hero h1,.page-title,.final-title{font-family:'Space Grotesk',sans-serif;line-height:1.04;letter-spacing:-.075em;font-weight:700;margin:19px 0 20px}.hero h1{font-size:clamp(54px,6.7vw,94px);max-width:700px}.hero h1 em{color:var(--coral);font-style:normal}.hero-description{font-size:17px;line-height:1.8;color:#cac4c8;max-width:570px;margin:0 0 24px}.hero-description strong{color:var(--text);font-weight:700}.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 22px;border-radius:12px;border:1px solid transparent;font-weight:800;line-height:1.2;min-height:49px;transition:transform .17s,background .17s,border-color .17s}.btn:hover:not(:disabled){transform:translateY(-2px)}.btn-primary{background:var(--coral);color:#20181a}.btn-primary:hover{background:#ff9889}.btn-secondary{background:#322f39;color:var(--text);border-color:#49444e}.btn-secondary:hover{background:#3d3945}.btn-ghost{border:1px solid var(--line);color:var(--text);background:transparent}.btn-ghost:hover{border-color:var(--violet)}.btn-small{min-height:38px;padding:9px 13px;font-size:13px;border-radius:9px}.hero-visual{min-height:365px;position:relative;display:grid;place-items:center}.orbit-circle{position:absolute;width:min(94%,425px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 42% 42%,#44404e 0,#282530 53%,#1c1a22 70%);box-shadow:0 18px 100px #a88cf51b,inset 0 0 0 1px #ffffff12;transform:none}.orbit-circle:after,.orbit-circle:before{content:"";position:absolute;border-radius:50%;border:1px solid #ffffff17;inset:24px}.orbit-circle:after{inset:55px}.big-age{font-family:'Space Grotesk';font-weight:700;letter-spacing:-.06em;color:var(--text);font-size:clamp(175px,23vw,290px);line-height:.92;position:relative;transform:none;text-shadow:0 10px 24px #17161b78;display:grid;place-items:center;padding-left:.02em}.age-label{display:none}.small-squiggle{display:none}.section-top{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:0 0 22px}.section-top h2,.section-heading{font:700 clamp(27px,3vw,38px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.05em;margin:6px 0}.section-top p{color:var(--muted);margin:0;font-size:14px}.section-note{font-size:13px!important;color:var(--muted)}.game-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.game-card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s}.game-card:hover{transform:translateY(-4px);border-color:#756777}.card-art{height:178px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.card-art.ry{background:#32232d}.card-art.ma{background:#292b38}.card-art.es{background:#292c2b}.rhythm-art{width:76%;height:130px;display:flex;gap:12px;justify-content:center;align-items:end;transform:rotate(-11deg)}.rhythm-art i{flex:1;border-radius:7px 7px 0 0;background:var(--coral);height:var(--h);opacity:.96;box-shadow:0 14px 0 #f37b6944}.rhythm-art i:nth-child(even){background:#f8b0a4}.maze-art{display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(7,1fr);width:155px;height:155px;gap:3px;transform:rotate(11deg)}.maze-art i{background:#6d648f;border-radius:3px}.maze-art i.path{background:#c9bbff}.maze-art i.current{background:var(--coral)}.escape-art{width:245px;height:128px;position:relative;background:#44494a;border:7px solid #646d6d;border-bottom:17px solid #2a3032;transform:rotate(-6deg);border-radius:9px}.escape-art:before{content:"";position:absolute;width:76px;height:102px;background:#20282b;border:6px solid #9c8d9a;left:86px;top:11px;border-radius:5px}.escape-art:after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--coral);left:141px;top:74px;box-shadow:-116px -40px 0 5px #8d9090,81px 7px 0 8px #7e718a}.card-body{padding:22px;flex:1;display:flex;flex-direction:column;gap:10px}.card-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#b5aeb8;font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:.1em}.completed{display:inline-flex;gap:5px;align-items:center;color:var(--mint);letter-spacing:0;text-transform:none}.card-body h3{font:700 26px/1.12 'Space Grotesk';letter-spacing:-.045em;margin:0}.card-body p{font-size:14px;color:#c0bac3;line-height:1.65;margin:0 0 12px;flex:1}.card-body .btn{align-self:flex-start}.footer{margin-top:70px;padding:20px 0;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--muted);font-size:12px}.footer span:last-child{color:#7f7882}.game-view{padding-top:45px;max-width:990px;margin:auto}.back-link{display:inline-flex;border:0;background:transparent;color:var(--muted);font-weight:700;padding:6px 0;gap:8px;align-items:center}.back-link:hover{color:var(--text)}.game-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:22px 0}.page-title{font-size:clamp(40px,6vw,70px);margin:5px 0}.game-intro{color:var(--muted);margin:0;max-width:650px}.game-board{border:1px solid var(--line);border-radius:20px;background:var(--panel);padding:24px;box-shadow:var(--shadow)}.stat-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}.stat{background:#1e1c23;border:1px solid #47414b;border-radius:11px;padding:12px 15px;min-width:92px;flex:1}.stat .stat-label{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:700}.stat strong{display:block;font:700 25px 'Space Grotesk';font-variant-numeric:tabular-nums;line-height:1.2}.game-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:18px}.helper{font-size:13px;color:var(--muted);line-height:1.7}.feedback{min-height:24px;color:var(--coral);font-size:14px;font-weight:700}.result{background:#1c1a21;border:1px solid #67596b;padding:25px;border-radius:15px;margin-top:17px;animation:appear .3s both}.result h3{font:700 29px 'Space Grotesk';letter-spacing:-.05em;margin:0 0 9px}.result p{color:#c8c0ca;margin:0 0 20px}.result-actions{display:flex;gap:10px;flex-wrap:wrap}.rhythm-stage{position:relative;max-width:560px;margin:0 auto;border-radius:14px;background:linear-gradient(180deg,#302736,#17161b);border:1px solid #69556c;overflow:hidden}.rhythm-track{position:relative;height:365px;display:grid;grid-template-columns:repeat(4,1fr)}.rhythm-lane{position:relative;overflow:hidden;border-right:1px solid #ffffff1d;background:linear-gradient(180deg,#ffffff04,transparent)}.rhythm-lane:last-child{border:0}.rhythm-lane.active{background:linear-gradient(180deg,#ffffff08,#f37b693b)}.rhythm-lane:nth-child(2) .rhythm-note,.rhythm-lane:nth-child(4) .rhythm-note{background:var(--violet);box-shadow:0 0 15px #a88cf566}.rhythm-note{position:absolute;left:15%;width:70%;height:20px;border-radius:6px;background:var(--coral);box-shadow:0 0 15px #f37b6966;pointer-events:none;will-change:transform}.hit-target{position:absolute;bottom:75px;left:0;right:0;height:5px;background:#f2ede57a;box-shadow:0 0 15px #ffffff23}.hit-target:before{content:"";position:absolute;top:-3px;width:100%;height:11px;background:#ffffff15}.lane-labels{display:grid;grid-template-columns:repeat(4,1fr);max-width:560px;margin:8px auto 0;gap:10px}.lane-button{border:1px solid #615867;border-radius:10px;background:#2f2935;color:var(--text);font:700 20px 'Space Grotesk';padding:13px 5px;touch-action:manipulation;user-select:none}.lane-button:nth-child(even){background:#302a40}.lane-button.pressed{background:var(--coral);color:var(--bg);transform:translateY(2px)}.rhythm-overlay{position:absolute;inset:0;background:#18161edb;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;z-index:5}.rhythm-overlay h3{font:700 34px 'Space Grotesk';margin:0;letter-spacing:-.06em}.rhythm-overlay p{margin:0 0 8px;color:#d7d0d8;max-width:350px}.rhythm-countdown{font:700 90px/1 'Space Grotesk';color:var(--coral)}.maze-layout{display:grid;grid-template-columns:minmax(0,470px) minmax(200px,1fr);gap:30px;align-items:start}.maze-canvas-wrap{border:1px solid #5c5363;border-radius:14px;padding:10px;background:#18171e;width:100%;max-width:475px;overflow:hidden}.maze-canvas{display:block;width:100%;height:auto;aspect-ratio:1;touch-action:none;user-select:none}.maze-info h3{font:700 26px 'Space Grotesk';letter-spacing:-.035em;margin:0 0 12px}.maze-info p{color:var(--muted);line-height:1.7;margin:0 0 16px}.dpad{display:grid;grid-template-columns:repeat(3,54px);grid-template-rows:repeat(2,50px);justify-content:center;gap:5px;margin:25px 0 10px}.dpad button{background:#34313d;border:1px solid #665b6c;color:var(--text);border-radius:10px;font-size:19px;touch-action:manipulation}.dpad button:hover{background:#50455c}.dpad .up{grid-column:2}.dpad .left{grid-column:1;grid-row:2}.dpad .down{grid-column:2;grid-row:2}.dpad .right{grid-column:3;grid-row:2}.maze-legend{display:flex;gap:18px;font-size:13px;color:var(--muted)}.legend-marker{display:inline-flex;align-items:center;gap:7px}.legend-marker:before{content:"";width:10px;height:10px;background:var(--coral);border-radius:50%}.legend-marker.exit:before{background:var(--mint)}.escape-shell{position:relative}.esc-scene{position:relative;aspect-ratio:1000 / 580;background:#27262e;border-radius:14px;overflow:hidden;border:1px solid #5c5360}.esc-scene svg{width:100%;height:100%;display:block}.hotspot{position:absolute;display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:#f2ede5f5;color:#242029;border:4px solid #27232ecc;transform:translate(-50%,-50%);font:800 23px 'Space Grotesk';box-shadow:0 5px 24px #0008;transition:transform .15s,background .15s;touch-action:manipulation}.hotspot:hover,.hotspot:focus-visible{background:var(--coral);transform:translate(-50%,-50%) scale(1.12);z-index:3}.hotspot:after{content:attr(data-name);white-space:nowrap;position:absolute;top:calc(100% + 7px);left:50%;transform:translateX(-50%);color:var(--text);background:#17161be8;border:1px solid #625b68;border-radius:6px;font:600 11px 'DM Sans';padding:4px 7px;opacity:0;pointer-events:none;transition:opacity .16s}.hotspot:hover:after,.hotspot:focus-visible:after{opacity:1}.escape-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;margin-top:17px}.inventory{font-size:13px;color:var(--muted)}.inventory strong{color:var(--text)}.dialog-layer{position:fixed;inset:0;background:#0e0c12c9;display:flex;justify-content:center;align-items:center;z-index:40;padding:18px;backdrop-filter:blur(6px)}.dialog-box{position:relative;width:min(100%,480px);max-height:calc(100dvh - 40px);overflow:auto;border-radius:18px;background:#29262f;border:1px solid #655a67;box-shadow:0 25px 90px #000a;padding:28px;animation:appear .2s both}.dialog-box h3{font:700 29px 'Space Grotesk';letter-spacing:-.04em;margin:0 24px 12px 0}.dialog-box p{color:#d0c9d0;line-height:1.65;margin:0 0 15px}.dialog-close{position:absolute;right:15px;top:13px;display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:#3c3742;border:0;color:var(--text);font-size:22px}.puzzle-display{margin:18px 0;padding:18px;border-radius:12px;background:#1a1920;border:1px solid #544a58;display:flex;gap:17px;justify-content:center;align-items:center;font-size:38px}.puzzle-display .shape{font-family:Arial,sans-serif;color:var(--text)}.puzzle-label{font-size:12px;color:var(--muted);text-align:center;margin-top:-8px;margin-bottom:12px}.pin-form{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:18px}.pin-form input{flex:1;min-width:100px;width:140px;background:#17161b;border:1px solid #79707d;color:var(--text);font:700 30px 'Space Grotesk';text-align:center;letter-spacing:.2em;border-radius:10px;padding:8px 10px}.esc-error{font-size:13px;color:var(--coral);min-height:22px;margin-top:10px}.book-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.book{min-height:100px;border-radius:7px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#201c25;font-weight:800;font-size:13px;box-shadow:inset 0 -8px 0 #00000016}.book b{font:700 40px 'Space Grotesk'}.book.blue{background:#85bcfa}.book.purple{background:#bb9aff}.book.coral{background:#ff9a85}.order{border:1px solid #5b5460;background:#1b1920;border-radius:10px;padding:15px;margin:14px 0;font-size:20px;letter-spacing:.02em;font-weight:800;text-align:center}.completion-banner{background:#222f2a;border:1px solid #6c9882;color:#b5e1c6;font-weight:700;padding:12px 15px;border-radius:11px;margin-bottom:17px}.final-wrap{max-width:850px;margin:72px auto 15px;padding:60px 56px 46px;border-radius:22px;background:var(--panel);border:1px solid #746471;box-shadow:var(--shadow);position:relative;overflow:hidden}.final-wrap:before{content:"14";font:700 290px/1 'Space Grotesk';color:#ffffff06;letter-spacing:-.11em;position:absolute;right:-25px;top:-60px;pointer-events:none}.final-wrap>*{position:relative}.final-title{font-size:clamp(44px,7vw,79px);margin:18px 0 30px}.final-message{max-width:630px;font-size:17px;line-height:1.9;color:#e0d9dd}.final-message p{margin:0 0 16px}.final-sign{font-weight:800;color:var(--coral);font-size:16px;margin:26px 0}.final-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:30px}.confetti{position:absolute!important;width:9px;height:15px;top:-24px;left:var(--x);background:var(--color);opacity:.8;transform:rotate(var(--rot));animation:fall var(--duration) linear var(--delay) forwards;pointer-events:none}.hidden{display:none!important}.muted{color:var(--muted)}.border-top{border-top:1px solid var(--line);padding-top:16px;margin-top:15px}.hint-callout{color:#decfef;background:#352d41;padding:12px 14px;border-radius:10px;border:1px solid #625273;font-size:13px;line-height:1.65;margin:12px 0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes fall{0%{transform:translateY(0) rotate(0);opacity:0}12%{opacity:1}100%{transform:translateY(670px) rotate(580deg);opacity:0}}
+@media(max-width:880px){.hero{grid-template-columns:1fr 270px;gap:15px}.hero h1{font-size:clamp(48px,7vw,70px)}.hero-visual{min-height:280px}.big-age{font-size:180px}.age-label{right:-9px}.game-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.card-body{padding:16px}.card-body h3{font-size:22px}.card-art{height:145px}.maze-layout{grid-template-columns:1fr}.maze-info{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:10px}.maze-info .dpad{margin:0}}
+@media(max-width:680px){.container{width:calc(100% - 32px)}.nav-inner{min-height:65px}.logo{font-size:23px}.progress-pill{font-size:11px;padding:8px 10px}.nav-right{gap:7px}.hero{display:flex;flex-direction:column;align-items:stretch;padding:47px 0 50px;gap:5px;min-height:0}.hero h1{font-size:clamp(53px,13vw,76px);margin:17px 0}.hero-description{font-size:15px;line-height:1.78}.hero-visual{min-height:255px;max-width:380px;width:100%;align-self:center;margin:5px 0 0}.orbit-circle{width:265px}.big-age{font-size:193px}.age-label{right:7%;bottom:3%;font-size:12px}.small-squiggle{right:15%;top:3%;width:51px;height:51px;border-width:8px}.section-top{align-items:flex-start;flex-direction:column;gap:4px}.game-grid{grid-template-columns:1fr;gap:14px}.game-card{flex-direction:row;min-height:168px}.card-art{width:36%;height:auto;min-height:165px;flex-shrink:0}.rhythm-art{gap:5px;height:90px}.maze-art{width:108px;height:108px}.escape-art{width:150px;height:90px;border-width:5px;border-bottom-width:11px}.escape-art:before{width:47px;height:72px;left:49px;top:4px;border-width:4px}.escape-art:after{left:84px;top:45px;box-shadow:-70px -24px 0 3px #8d9090,44px 5px 0 4px #7e718a}.card-body{padding:16px;gap:5px}.card-body h3{font-size:22px}.card-body p{font-size:12px;line-height:1.5;margin:0 0 7px}.card-body .btn{min-height:37px;padding:8px 11px;font-size:12px}.card-meta{font-size:10px}.footer{margin-top:40px;flex-direction:column;align-items:flex-start;gap:2px}.main{padding-bottom:45px}.game-view{padding-top:25px}.page-title{font-size:clamp(39px,10vw,55px)}.game-head{margin:12px 0 20px;align-items:start}.game-board{padding:12px;border-radius:13px}.stat{padding:10px;min-width:65px}.stat strong{font-size:21px}.stat .stat-label{font-size:10px}.rhythm-track{height:310px}.rhythm-stage{max-width:100%}.rhythm-overlay h3{font-size:30px}.lane-labels{gap:6px}.lane-button{padding:10px 3px;font-size:17px}.maze-info{display:block}.maze-info h3{font-size:22px}.dpad{margin:12px auto 0}.esc-scene{aspect-ratio:1000/660}.hotspot{width:33px;height:33px;font-size:20px;border-width:3px}.hotspot:after{font-size:9px}.escape-bottom{align-items:start}.dialog-box{padding:22px}.final-wrap{margin:35px auto 0;padding:45px 25px 29px}.final-message{font-size:15px}.final-title{font-size:54px}.btn{font-size:14px}.game-actions{align-items:start}.game-actions .helper{width:100%}}
+@media(max-width:390px){.game-card{flex-direction:column}.card-art{width:100%;height:140px;min-height:0}.card-body p{font-size:13px}.card-meta{font-size:11px}.progress-pill .dot{display:none}.nav-right .subtle-btn{font-size:12px}.final-title{font-size:45px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* Revisão: música real e enigmas táteis variados */
+.ry-song{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:11px 14px;margin-bottom:15px;border:1px solid #544657;border-radius:11px;background:#211c27}
+.ry-song .eyebrow{font-size:10px}.ry-song strong{font-size:14px}.ry-song .helper{font-size:11px}
+.ry-progress{display:flex;gap:9px;align-items:center;margin-top:11px;color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}.ry-progress-bg{flex:1;height:7px;border-radius:99px;background:#48414d;overflow:hidden}.ry-progress-bg>div{height:100%;width:0;background:var(--coral)}.ry-toolbar{display:flex;gap:6px;flex-wrap:wrap}
+.circuit-board{display:grid;grid-template-columns:repeat(3,92px);gap:6px;justify-content:center;margin:15px auto;background:#15181f;padding:10px;border:1px solid #514f65;border-radius:12px;width:max-content}
+.circuit-tile{width:92px;height:92px;background:#383748;border:1px solid #656378;border-radius:9px;position:relative;display:grid;place-items:center;touch-action:manipulation}.circuit-tile:hover{background:#444052}
+.circuit-wire{position:absolute;inset:0;display:block;transition:transform .18s}.circuit-wire i{position:absolute;top:0;left:calc(50% - 8px);height:50%;width:16px;border-radius:4px;background:var(--mint)}.circuit-wire b{position:absolute;right:0;top:calc(50% - 8px);width:50%;height:16px;border-radius:4px;background:var(--mint)}
+.wire-board{display:grid;grid-template-columns:minmax(0,1fr) 90px minmax(0,1fr);gap:8px;align-items:center;margin:17px 0}.wire-column{display:grid;gap:10px}.wire-port{background:#24222b;border:1px solid #5b5466;border-radius:9px;min-height:47px;color:var(--text);font-size:12px;font-weight:800;display:flex;align-items:center;gap:8px;justify-content:center}.wire-port i{height:15px;width:15px;border-radius:50%;background:var(--port);box-shadow:0 0 12px var(--port)}.wire-port.wire-selected{outline:2px solid #eae5e1}.wire-port:disabled{opacity:.35}.wire-bridges{font-size:13px;color:var(--mint);font-weight:800;text-align:center}
+.lamp-aim{background:#1e1b24;border:1px solid #5c5363;padding:15px;border-radius:12px;margin:10px 0 16px}.lamp-art{height:130px;position:relative;background:radial-gradient(circle at 30% 65%,#463b48,#25212b);border-radius:8px;overflow:hidden}.lamp-base{position:absolute;left:24%;top:55%;color:#e6c9a2;font-size:38px;line-height:1}.lamp-ray{position:absolute;left:29%;top:67%;width:38%;height:10px;border-radius:10px;background:#e0d5a1;box-shadow:0 0 19px #e0d5a189;transform-origin:0 50%;transition:transform .17s}.lamp-target{position:absolute;right:10%;top:35%;font-size:48px;color:#ccbcae;line-height:1}.lamp-target small{display:block;color:var(--muted);font-size:10px}.lamp-aim p{margin:9px 0 0;text-align:center}
+.symbol-order{font:700 30px 'Space Grotesk';background:#181821;color:#eac8b0;border:1px dashed #837279;border-radius:10px;text-align:center;margin:15px 0;padding:15px;letter-spacing:.03em}
+.books-target{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#1b1920;border:1px dashed #675f69;border-radius:9px;padding:10px;margin:10px 0}.books-target small{color:var(--muted)}.books-target strong{font-size:22px}.books-board{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:17px 0}.symbol-book{min-height:90px;color:#211c28;background:#b0a0cb;border:3px solid #e0cfe3;border-bottom:12px solid #71627f;border-radius:5px 9px 2px 2px;font-size:34px;box-shadow:inset 7px 0 0 #ffffff39}.symbol-book:nth-child(even){background:#f39b89}.symbol-book.book-selected{outline:3px solid #a0d6bc;outline-offset:2px;transform:translateY(-8px)}
+@media(max-width:500px){.wire-board{grid-template-columns:minmax(0,1fr) 55px minmax(0,1fr);gap:4px}.wire-port{font-size:11px;gap:4px}.symbol-book{min-height:71px;font-size:28px}.books-target{flex-direction:column}.circuit-board{grid-template-columns:repeat(3,72px)}.circuit-tile{height:72px;width:72px}.ry-song{gap:6px}.ry-toolbar{width:100%}.ry-toolbar button{flex:1}}
+
+
+/* Animações de navegação e reações: entram suavemente sem comprometer controles. */
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pageIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes aura{0%,100%{opacity:.28;transform:scale(.92)}50%{opacity:.65;transform:scale(1.12)}}
+@keyframes popIn{0%{opacity:0;transform:scale(.88)}75%{opacity:1;transform:scale(1.05)}100%{transform:scale(1)}}
+@keyframes ping{0%{box-shadow:0 0 0 0 #f37b6955}65%{box-shadow:0 0 0 12px #f37b6900}100%{box-shadow:0 0 0 0 #f37b6900}}
+@keyframes spark{from{opacity:1;transform:translateY(0) scale(.75)}to{opacity:0;transform:translateY(-31px) scale(1.65)}}
+@keyframes wireDraw{from{stroke-dashoffset:850;opacity:.15}to{stroke-dashoffset:0;opacity:1}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}
+@keyframes lightOn{0%{filter:brightness(.7)}50%{filter:brightness(1.6)}100%{filter:brightness(1)}}
+@keyframes celebration{0%,100%{filter:drop-shadow(0 0 0 transparent)}50%{filter:drop-shadow(0 0 20px #f37b695e)}}
+.hero>div:first-child{animation:pageIn .65s cubic-bezier(.2,.7,.2,1) both}
+.hero-visual{animation:pageIn .85s .10s both}
+.hero-visual .orbit-circle{animation:breathe 6s ease-in-out infinite}
+.hero-visual .small-squiggle{animation:aura 4s ease-in-out infinite}
+.hero-visual .big-age{animation:celebration 4s ease-in-out infinite}
+.section-top{animation:pageIn .55s .05s both}
+.game-card{animation:pageIn .58s both}
+.game-card:nth-child(2){animation-delay:.08s}
+.game-card:nth-child(3){animation-delay:.16s}
+.game-view{animation:pageIn .48s both}
+.game-board{animation:pageIn .5s .07s both}
+.dialog-layer{animation:fadeIn .18s both}
+.dialog-box{animation:popIn .25s cubic-bezier(.2,.75,.2,1) both}
+.hotspot{animation:ping 2.6s ease-out infinite;transition:transform .18s,background .18s}
+.hotspot:hover{transform:scale(1.14)}
+.circuit-wire{transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.wire-board{position:relative}
+.wire-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:1}
+.wire-column{position:relative;z-index:2}
+.wire-bridges{position:relative;z-index:0}
+.wire-port{transition:transform .16s,border-color .16s,filter .16s}
+.wire-port:not(:disabled):hover{transform:scale(1.045);border-color:var(--port)}
+.wire-port.wire-selected{background:#39313c;transform:scale(1.045);filter:drop-shadow(0 0 6px var(--port))}
+.wire-port.wire-connected:disabled{opacity:1;border-color:var(--port);background:#303136}
+.wire-path{fill:none;stroke-width:6;stroke-linecap:round;stroke-dasharray:850;animation:wireDraw .58s ease-out both;filter:drop-shadow(0 0 6px currentColor)}
+.wrong-connection{animation:shake .26s}
+.lamp-ray{transition:transform .32s ease,opacity .25s;animation:lightOn 2.4s ease-in-out infinite}
+.symbol-book{transition:transform .23s ease,box-shadow .23s ease;animation:popIn .3s both}
+.symbol-book:hover:not(.book-selected){transform:translateY(-3px)}
+.book-selected{box-shadow:0 6px 20px #a0d6bc33}
+.inventory strong{transition:color .2s}
+.completion-banner:not(.hidden){animation:popIn .5s both}
+.rhythm-lane{transition:background .15s}
+.rhythm-note{transition:opacity .08s}
+.hit-spark{position:absolute;bottom:64px;left:28%;width:44%;height:24px;border-radius:50%;background:#f37b69a6;box-shadow:0 0 21px #f37b69;pointer-events:none;animation:spark .32s both}
+.rhythm-lane:nth-child(even) .hit-spark{background:#a88cf5a6;box-shadow:0 0 21px #a88cf5}
+.hit-spark.is-perfect{box-shadow:0 0 34px #f2ede5}
+.rhythm-overlay h3{animation:popIn .3s both}
+.ry-progress-bg #ry-progress-fill{transition:width .05s linear}
+.maze-canvas-wrap{animation:pageIn .45s both}
+.dpad button:active,.btn:active{transform:scale(.96)}
+.final-wrap{animation:pageIn .55s both}
+.final-message{animation:pageIn .7s .18s both}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Arte de cenário: imagens originais + hotspots HTML acessíveis. */
+.cover-illustration{width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;transition:transform .8s cubic-bezier(.2,.7,.3,1),filter .4s}
+.card-art{isolation:isolate}
+.card-art::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17161b40,transparent 55%);pointer-events:none}
+.game-card:hover .cover-illustration{transform:scale(1.07);filter:saturate(1.12)}
+.card-art.ry,.card-art.ma,.card-art.es{background:#211b27}
+.esc-scene{isolation:isolate;background:#17151b;aspect-ratio:1000/570}
+.room-photo{position:absolute;inset:0;background:url('assets/quarto.webp') center/cover no-repeat;animation:roomEnter 1.2s ease-out both;filter:saturate(1.12)}
+.room-glow{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#18141a13,#100b181c),radial-gradient(circle at 58% 39%,#ecb96a19,transparent 32%);animation:roomLight 6s ease-in-out infinite}
+.esc-scene .hotspot{z-index:3;border:2px solid #fdeee9;background:#2c2433dc;color:#f8ede8;box-shadow:0 0 0 4px #11111165,0 0 20px #f37b6933;animation:objectPulse 3.5s ease-in-out infinite}
+.esc-scene .hotspot:focus-visible,.esc-scene .hotspot:hover{background:var(--coral);color:#18121b;transform:translate(-50%,-50%) scale(1.15)}
+.esc-scene .hotspot:nth-of-type(2n){animation-delay:1.1s}
+.esc-scene .hotspot:nth-of-type(3n){animation-delay:2.2s}
+.rhythm-stage{isolation:isolate}
+.rhythm-stage:before{content:"";position:absolute;inset:0;background:url('assets/cover_rhythm.webp') center/cover;opacity:.2;pointer-events:none;filter:blur(3px) saturate(.8)}
+.rhythm-track{z-index:1}
+.rhythm-track.beat-light .hit-target{box-shadow:0 0 25px #f37b6966}
+.maze-canvas-wrap{position:relative;background:#191723 url('assets/cover_maze.webp') center/cover no-repeat}
+.maze-canvas{position:relative;box-shadow:0 0 35px #05050a48}
+.result{animation:pageIn .5s cubic-bezier(.17,.75,.23,1) both}
+@keyframes objectPulse{0%,100%{box-shadow:0 0 0 3px #11111180,0 0 10px #f37b693b}50%{box-shadow:0 0 0 5px #11111150,0 0 19px #f37b697e}}
+@keyframes roomLight{0%,100%{opacity:.82}50%{opacity:1}}
+@keyframes roomEnter{from{opacity:.4;transform:scale(1.045)}to{opacity:1;transform:scale(1)}}
+@media(max-width:680px){.esc-scene{aspect-ratio:1000/660}.esc-scene .hotspot{width:29px;height:29px;font-size:15px}.cover-illustration{object-position:center}}
+@media(prefers-reduced-motion:reduce){.room-photo,.room-glow,.esc-scene .hotspot,.cover-illustration{animation:none!important;transition:none!important}}
+
+
+/* V5: numeral decorativo não selecionável e inclinado, flutuando junto ao círculo. */
+.hero-visual{isolation:isolate;user-select:none;-webkit-user-select:none}
+.hero-visual .big-age{
+  font-family:'Fugaz One','Space Grotesk',sans-serif;
+  font-weight:400;
+  line-height:1;
+  letter-spacing:-.07em;
+  transform:translate3d(0,0,0) rotate(-13deg);
+  transform-origin:50% 50%;
+  animation:ageFloat 6s ease-in-out infinite;
+  user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;
+  pointer-events:none;
+  text-shadow:0 16px 18px #110f197e,0 0 35px #b198f52a;
+}
+.hero-visual .orbit-circle{pointer-events:none;animation:breathe 6s ease-in-out infinite}
+@keyframes ageFloat{
+  0%,100%{transform:translate3d(0,0,0) rotate(-13deg);filter:drop-shadow(0 0 2px #a88cf520)}
+  50%{transform:translate3d(0,-10px,0) rotate(-10deg);filter:drop-shadow(0 0 16px #a88cf54d)}
+}
+/* Escape Room: todas as coordenadas seguem a imagem inteira, sem recorte no celular. */
+.esc-scene{aspect-ratio:16 / 9}
+@media(max-width:680px){.esc-scene{aspect-ratio:16 / 9}}
+/* Circuito verdadeiro: 9 módulos móveis + rotação individual. */
+.circuit-board{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+ width:min(100%,346px);gap:7px;margin:18px auto 12px;
+ padding:9px;border-radius:16px;border:1px solid #575064;
+ background:linear-gradient(130deg,#11151e,#242331);
+ box-shadow:inset 0 0 28px #090b12,0 12px 30px #0c0b14aa;
+}
+.circuit-slot{position:relative;min-width:0;aspect-ratio:1;border-radius:10px;
+ background:#1b202b;border:1px solid #494453;display:grid;place-items:center;
+ transition:border-color .16s,box-shadow .18s}
+.circuit-slot.is-selected{border-color:#e9cca0;box-shadow:0 0 0 2px #e9cca07a,0 0 18px #e5ba8b3b}
+.circuit-slot.drop-target{border-color:var(--mint);box-shadow:0 0 0 2px #a0d6bca8}
+.circuit-piece{position:absolute;inset:4px 4px 20px;border:1px solid #5d6069;
+ border-radius:7px;background:linear-gradient(145deg,#3c4550,#282c39);
+ padding:3px;display:flex;align-items:center;justify-content:center;
+ touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;
+ transition:background .15s,border-color .15s;}
+.circuit-piece:active{cursor:grabbing}
+.circuit-piece:hover{background:#414759;border-color:#9b8cac}
+.circuit-piece svg{width:100%;height:100%;overflow:visible;pointer-events:none}
+.circuit-piece .conduit-base{stroke:#0f1a26;stroke-width:24;stroke-linecap:round;fill:none}
+.circuit-piece .conduit{stroke:#f3c780;stroke-width:13;stroke-linecap:round;fill:none;
+ filter:drop-shadow(0 0 4px #e6a65b6e)}
+.circuit-piece .conduit-center{fill:#fff2c8;stroke:#4e3940;stroke-width:5}
+.circuit-rotate{position:absolute;right:3px;bottom:2px;min-width:36px;height:26px;
+ border:1px solid #756774;border-radius:6px;background:#393442;color:#eee3ee;
+ font-size:17px;font-weight:800;line-height:1;display:grid;place-items:center;touch-action:manipulation;z-index:2}
+.circuit-rotate:hover{background:#66536c}
+.circuit-pin{position:absolute;font:800 9px/1.1 'DM Sans',sans-serif;letter-spacing:.04em;
+ border:1px solid #cfaa71;color:#16181f;background:#f6c881;padding:4px 5px;border-radius:5px;z-index:3;pointer-events:none}
+.circuit-pin.start{left:-18px;top:12px}
+.circuit-pin.end{right:-16px;bottom:30px;background:#abdec2;border-color:#a1cdb4}
+.circuit-progress{text-align:center;min-height:19px;color:#c5b7c8;font-size:12px;font-weight:700}
+.circuit-piece-ghost{position:fixed;z-index:9999;pointer-events:none;opacity:.86;
+ border:2px solid #f3c780;border-radius:9px;background:#2b3039;box-shadow:0 14px 36px #000a;
+ transform:translate(-50%,-50%) scale(1.03)}
+.circuit-piece-ghost svg{width:100%;height:100%}
+.circuit-piece-ghost .conduit-base{stroke:#1b2430;stroke-width:24;fill:none;stroke-linecap:round}
+.circuit-piece-ghost .conduit{stroke:#f3c780;stroke-width:13;fill:none;stroke-linecap:round}
+.circuit-piece-ghost .conduit-center{fill:#fff2c8}
+@media(max-width:500px){.circuit-board{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;max-width:300px;padding:8px}.circuit-tile{width:auto;height:auto}.circuit-piece{inset:3px 3px 20px}}
+
+/* Correção: o círculo (com a animação de flutuar) não pode invadir o botão. */
+.hero-visual{min-height:470px}
+@media(max-width:880px){.hero-visual{min-height:320px}}
+@media(max-width:680px){.hero-visual{min-height:330px;margin-top:28px}.orbit-circle{width:min(265px,100%)}}
+
+</style>
+  <title>Aniversário da Alice</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+/* Aniversário da Alice — 3 minigames sem bibliotecas e sem servidor. */
+(() => {
+  'use strict';
+  const KEY = 'alice-aniversario-14-progress-v1';
+  const app = document.getElementById('app');
+  const games = ['rhythm', 'maze', 'escape'];
+  const meta = {
+    rhythm: {title:'Ritmo',time:'~1 minuto',description:'Acompanhe as notas da música e acerte no tempo certo.'},
+    maze: {title:'Labirinto',time:'~2–4 minutos',description:'Encontre a saída. A direção contrária também é uma direção, tecnicamente.'},
+    escape: {title:'Escape Room',time:'~7–10 minutos',description:'Investigue o quarto e resolva quatro enigmas diferentes para sair.'}
+  };
+  let completed = loadProgress();
+  let currentView = 'home';
+  let cleanup = () => {};
+  let activeDialog = null;
+
+  function loadProgress() {
+    try { const x = JSON.parse(localStorage.getItem(KEY) || '{}'); return Object.fromEntries(games.map(g => [g, !!x[g]])); }
+    catch { return {rhythm:false,maze:false,escape:false}; }
+  }
+  function saveProgress() { try {localStorage.setItem(KEY,JSON.stringify(completed));} catch {} }
+  function markComplete(g) {completed[g]=true;saveProgress();updateProgress();}
+  function count() {return games.filter(g=>completed[g]).length;}
+  function allDone() {return count()===3;}
+  function updateProgress() {
+    const counter=document.querySelector('#progress-number');
+    if(counter)counter.textContent=`${count()}/3 jogos`;
+  }
+  function shell(content) {
+    app.innerHTML=`<header class="site-header"><div class="container nav-inner"><button class="logo" id="logo" aria-label="Voltar para a página inicial">alice<span>.</span></button><div class="nav-right"><span class="progress-pill" aria-label="Progresso"><span class="dot"></span><span id="progress-number">${count()}/3 jogos</span></span><button class="subtle-btn" id="top-home">Início</button></div></div></header><main class="container main" id="main">${content}</main>`;
+    document.querySelector('#logo').addEventListener('click',()=>go('home'));
+    document.querySelector('#top-home').addEventListener('click',()=>go('home'));
+  }
+  function go(view) {
+    cleanup();cleanup=()=>{};closeDialog();currentView=view;
+    window.scrollTo({top:0,behavior:'instant'});
+    if(view==='home') renderHome();
+    else if(view==='rhythm') renderRhythm();
+    else if(view==='maze') renderMaze();
+    else if(view==='escape') renderEscape();
+    else if(view==='final') renderFinal();
+  }
+  function gameFrame(g, content) {
+    const m=meta[g];
+    shell(`<section class="game-view"><button class="back-link" id="back-home">← Voltar aos jogos</button><div class="game-head"><div><span class="eyebrow">Minigame ${games.indexOf(g)+1} de 3</span><h1 class="page-title">${m.title}</h1><p class="game-intro">${m.description}</p></div></div><div class="game-board">${content}</div></section>`);
+    document.querySelector('#back-home').addEventListener('click',()=>go('home'));
+  }
+  function completionBlock(title,message,retry,extra='') {
+    return `<div class="result" role="status"><span class="eyebrow">Concluído</span><h3>${title}</h3><p>${message}</p>${extra}<div class="result-actions"><button class="btn btn-primary" id="result-next">${allDone()?'Ver minha mensagem':'Voltar aos jogos'} →</button><button class="btn btn-secondary" id="result-retry">Jogar de novo</button></div></div>`;
+  }
+  function attachCompletion(next, retry) {
+    document.querySelector('#result-next')?.addEventListener('click',()=>go(allDone()?'final':'home'));
+    document.querySelector('#result-retry')?.addEventListener('click',()=>go(retry));
+  }
+
+  function renderHome() {
+    const mazeCells=['w','w','w','w','w','w','w','w','p','p','p','w','p','w','w','p','w','p','w','p','w','w','p','w','p','p','p','w','w','p','w','w','w','p','w','w','p','p','p','w','p','w','w','w','w','p','p','p','w'];
+    const arts={
+      rhythm:`<img class="cover-illustration" src="assets/cover_rhythm.webp" alt="" loading="lazy">`,
+      maze:`<img class="cover-illustration" src="assets/cover_maze.webp" alt="" loading="lazy">`,
+      escape:`<img class="cover-illustration" src="assets/cover_escape.webp" alt="" loading="lazy">`
+    };
+    const cards=games.map((g,i)=>{
+      const m=meta[g];
+      return `<article class="game-card"><div class="card-art ${g==='rhythm'?'ry':g==='maze'?'ma':'es'}">${arts[g]}</div><div class="card-body"><div class="card-meta"><span>0${i+1} / ${m.time}</span>${completed[g]?'<span class="completed">✓ Concluído</span>':'<span>Disponível</span>'}</div><h3>${m.title}</h3><p>${m.description}</p><button class="btn ${completed[g]?'btn-secondary':'btn-primary'} btn-small card-play" data-game="${g}">${completed[g]?'Jogar novamente':'Jogar'} <span aria-hidden="true">↗</span></button></div></article>`;
+    }).join('');
+    shell(`<section class="hero"><div><span class="eyebrow">Para Alice, nos seus 14 anos</span><h1>Feliz aniversário, <em>Alice.</em></h1><p class="hero-description">Fiz três joguinhos pra você. Termina os três que tem uma mensagem no final.<br><strong>E tenta não passar vergonha, pirralha.</strong></p><div class="hero-actions"><button class="btn btn-primary" id="hero-start">${allDone()?'Ler a mensagem':'Começar a jogar'} <span aria-hidden="true">→</span></button></div></div><div class="hero-visual" aria-hidden="true"><div class="orbit-circle"></div><div class="big-age">14</div></div></section><section id="games"><div class="section-top"><div><span class="eyebrow">Três jogos</span><h2>Escolhe por onde começar.</h2></div><p>Jogue na ordem que quiser. Seu progresso fica salvo neste aparelho.</p></div><div class="game-grid">${cards}</div></section>${allDone()?`<section class="border-top" style="margin-top:32px"><h2 class="section-heading">Você terminou os três.</h2><p class="muted">Tá, agora pode ver o que eu escrevi.</p><button id="home-final" class="btn btn-primary">Abrir mensagem →</button></section>`:''}<footer class="footer"><span>Feito especialmente para Alice. <span aria-hidden="true">♥</span> (não se acostume)</span><span>14 anos · Só no navegador</span></footer>`);
+    document.querySelector('#hero-start').addEventListener('click',()=>go(allDone()?'final':'rhythm'));
+    document.querySelectorAll('.card-play').forEach(b=>b.addEventListener('click',()=>go(b.dataset.game)));
+    document.querySelector('#home-final')?.addEventListener('click',()=>go('final'));
+  }
+
+  // RITMO: tempos extraídos dos ataques da gravação enviada, já com 2s de introdução instrumental silenciosa.
+  // A linha de acerto usa o próprio tempo de reprodução como relógio, inclusive após pausas.
+  const MUSIC_URL = 'audio/musica.mp3';
+  const notesPattern = [[2.055,0],[2.566,2],[3.065,3],[3.558,2],[4.058,0],[4.563,2],[5.056,3],[5.555,2],[6.066,0],[6.565,3],[7.065,2],[7.564,3],[8.063,0],[8.562,3],[9.067,2],[9.567,3],[10.060,1],[10.310,2],[10.565,3],[11.064,0],[11.314,1],[11.558,2],[12.063,1],[12.307,2],[12.562,3],[13.055,0],[13.311,1],[13.560,2],[14.065,0],[14.315,2],[14.565,3],[15.064,1],[15.314,2],[15.563,3],[16.062,0],[16.312,2],[16.562,3],[17.061,1],[17.316,2],[17.566,3],[18.059,0],[18.309,1],[18.564,2],[19.064,3],[19.313,1],[19.563,2],[20.062,0],[20.312,1],[20.561,2],[21.060,3],[21.316,1],[21.560,2],[22.065,0],[22.314,1],[22.564,3],[23.069,2],[23.313,1],[23.562,3],[24.062,0],[24.311,1],[24.561,3],[25.066,2],[25.316,1],[25.565,3],[26.064,1],[26.308,2],[26.564,3],[27.063,0],[27.312,1],[27.562,2],[28.061,1],[28.311,2],[28.566,3],[29.060,0],[29.315,1],[29.559,2],[30.064,0],[30.314,2],[30.569,3],[31.062,1],[31.312,2],[31.562,3],[32.061,0],[32.316,2],[32.566,3],[33.065,1],[33.315,2],[33.564,3]].map(([at,lane])=>({at,lane}));
+  let rhythmAudioAllowed=true;
+  function renderRhythm() {
+    gameFrame('rhythm',`<div class="stat-row"><div class="stat"><div class="stat-label">Pontos</div><strong id="ry-score">0</strong></div><div class="stat"><div class="stat-label">Combo</div><strong id="ry-combo">0</strong></div><div class="stat"><div class="stat-label">Precisão</div><strong id="ry-accuracy">—</strong></div></div>
+      
+      <div class="rhythm-stage"><div class="rhythm-track" id="rhythm-track">${['A','S','K','L'].map((letter,i)=>`<div class="rhythm-lane" data-lane="${i}" aria-label="Pista ${letter}"></div>`).join('')}<div class="hit-target" aria-hidden="true"></div></div><div class="rhythm-overlay" id="ry-overlay"><span class="eyebrow">Pronta?</span><h3>Acompanha a música.</h3><p>As notas estão sincronizadas com a faixa. Aperte quando elas alcançarem a linha clara.</p><button class="btn btn-primary" id="ry-start">Começar →</button></div></div>
+      <div class="lane-labels">${['A','S','K','L'].map((x,i)=>`<button class="lane-button" data-lane="${i}" aria-label="Tocar pista ${x}">${x}</button>`).join('')}</div><div class="ry-progress"><span id="ry-time">0:00</span><div class="ry-progress-bg"><div id="ry-progress-fill"></div></div><span id="ry-duration">0:36</span></div>
+      <div class="game-actions"><span class="helper">Teclado: <strong>A S K L</strong> · Celular: toque nas pistas · Fones ajudam.</span><div class="ry-toolbar"><button class="btn btn-secondary btn-small" id="ry-pause" disabled>Pausar</button><button class="btn btn-secondary btn-small" id="ry-sound" aria-pressed="false">Silenciar</button></div></div><div class="feedback" id="ry-feedback" role="status" aria-live="polite"></div><div id="ry-result"></div>`);
+    const lanes=[...document.querySelectorAll('.rhythm-lane')],overlay=document.querySelector('#ry-overlay');
+    const scoreEl=document.querySelector('#ry-score'),comboEl=document.querySelector('#ry-combo'),accuracyEl=document.querySelector('#ry-accuracy'),feedbackEl=document.querySelector('#ry-feedback');
+    const pauseButton=document.querySelector('#ry-pause'),soundButton=document.querySelector('#ry-sound');
+    let player=new Audio(MUSIC_URL),raf=null,playing=false,finished=false,started=false,score=0,combo=0,hits=0,misses=0,perfect=0,feedbackUntil=0,notes=[];
+    const pulses=[];
+    player.preload='auto';player.volume=.85;player.muted=!rhythmAudioAllowed;
+    player.addEventListener('loadedmetadata',()=>{document.querySelector('#ry-duration')?.replaceChildren(document.createTextNode(formatDuration(player.duration)));});
+    function formatDuration(seconds){return `${Math.floor(seconds/60)}:${String(Math.ceil(seconds%60)).padStart(2,'0')}`;}
+    function stop(){playing=false;cancelAnimationFrame(raf);pulses.forEach(clearTimeout);player.pause();player.removeAttribute('src');player.load();}
+    cleanup=stop;
+    function updateStats(){scoreEl.textContent=score.toLocaleString('pt-BR');comboEl.textContent=combo;accuracyEl.textContent=hits+misses?`${Math.round(hits/(hits+misses)*100)}%`:'—';}
+    function tell(s){feedbackEl.textContent=s;feedbackUntil=performance.now()+1050;}
+    function now(){return player.currentTime||0;}
+    function press(lane){
+      const b=document.querySelector(`.lane-button[data-lane="${lane}"]`);
+      b?.classList.add('pressed');lanes[lane]?.classList.add('active');
+      pulses.push(setTimeout(()=>{b?.classList.remove('pressed');lanes[lane]?.classList.remove('active');},105));
+      if(!playing||player.paused)return;
+      const t=now();let nearest=null,best=Infinity;
+      notes.forEach(n=>{const diff=Math.abs(n.at-t);if(!n.hit&&!n.missed&&n.lane===lane&&diff<best){best=diff;nearest=n;}});
+      if(!nearest||best>.25){tell('Fora do tempo.');combo=0;updateStats();return;}
+      nearest.hit=true;nearest.el.remove();hits++;combo++;flashHit(lane,best);
+      if(best<=.09){score+=300;perfect++;tell('Perfeito!');}
+      else if(best<=.17){score+=180;tell('Boa!');}
+      else{score+=90;tell('Quase!');}
+      updateStats();
+    }
+    function flashHit(lane,accuracy){
+      const track=lanes[lane];if(!track)return;
+      const spark=document.createElement('span');spark.className='hit-spark '+(accuracy<=.09?'is-perfect':'');track.appendChild(spark);
+      spark.addEventListener('animationend',()=>spark.remove(),{once:true});
+      document.querySelector('#rhythm-track').classList.remove('hit-beat');
+      void document.querySelector('#rhythm-track').offsetWidth;
+      document.querySelector('#rhythm-track').classList.add('hit-beat');
+    }
+    function onKey(e){if(currentView!=='rhythm'||e.repeat||e.altKey||e.ctrlKey||e.metaKey)return;const n={a:0,s:1,k:2,l:3}[e.key.toLowerCase()];if(n!==undefined){e.preventDefault();press(n);}}
+    document.addEventListener('keydown',onKey);
+    const oldCleanup=cleanup;cleanup=()=>{document.removeEventListener('keydown',onKey);document.removeEventListener('visibilitychange',onVisibility);oldCleanup();};
+    document.querySelectorAll('.lane-button, .rhythm-lane').forEach(b=>b.addEventListener('pointerdown',e=>{e.preventDefault();press(Number(b.dataset.lane));}));
+    soundButton.addEventListener('click',()=>{rhythmAudioAllowed=!rhythmAudioAllowed;player.muted=!rhythmAudioAllowed;soundButton.textContent=rhythmAudioAllowed?'Silenciar':'Ativar som';soundButton.setAttribute('aria-pressed',String(!rhythmAudioAllowed));});
+    soundButton.textContent=rhythmAudioAllowed?'Silenciar':'Ativar som';
+    function setPause(on){
+      if(!started||finished)return;
+      if(on){player.pause();playing=false;cancelAnimationFrame(raf);pauseButton.textContent='Retomar';overlay.classList.remove('hidden');overlay.innerHTML='<h3>Jogo pausado.</h3><p>A música para junto com as notas.</p><button id="ry-resume" class="btn btn-primary">Continuar →</button>';overlay.querySelector('#ry-resume').addEventListener('click',()=>setPause(false));}
+      else{player.play().then(()=>{playing=true;pauseButton.textContent='Pausar';overlay.classList.add('hidden');raf=requestAnimationFrame(frame);}).catch(()=>tell('Não foi possível retomar o áudio.'));}
+    }
+    pauseButton.addEventListener('click',()=>setPause(playing));
+    function onVisibility(){if(document.hidden&&playing)setPause(true);}
+    document.addEventListener('visibilitychange',onVisibility);
+    function start(){
+      if(started)return;started=true;finished=false;score=0;combo=0;hits=0;misses=0;perfect=0;updateStats();tell('');
+      lanes.forEach(l=>l.replaceChildren());
+      notes=notesPattern.map(n=>({...n,hit:false,missed:false,el:null}));
+      notes.forEach(n=>{const el=document.createElement('span');el.className='rhythm-note';el.setAttribute('aria-hidden','true');n.el=el;lanes[n.lane].appendChild(el);el.style.display='none';});
+      overlay.innerHTML='<h3>Prepare-se.</h3><p>As primeiras notas já estão descendo.</p>';pauseButton.disabled=false;
+      player.currentTime=0;
+      player.play().then(()=>{playing=true;raf=requestAnimationFrame(frame);}).catch(()=>{
+        started=false;pauseButton.disabled=true;overlay.innerHTML='<h3>O áudio não abriu.</h3><p>Confira se o arquivo da música está junto do site e tente novamente.</p><button class="btn btn-primary" id="ry-try">Tentar de novo</button>';overlay.querySelector('#ry-try').addEventListener('click',start);
+      });
+    }
+    let lastBeatIndex=-1;
+    function frame(){
+      if(!playing||currentView!=='rhythm')return;
+      const t=now();if(t>.40)overlay.classList.add('hidden');
+      const nextIdx=notesPattern.findLastIndex(n=>n.at<=t);if(nextIdx>lastBeatIndex){lastBeatIndex=nextIdx;document.querySelector('#rhythm-track')?.classList.add('beat-light');}else{document.querySelector('#rhythm-track')?.classList.remove('beat-light');}
+      const track=document.querySelector('#rhythm-track'),lineY=track.clientHeight-76;
+      for(const n of notes){
+        if(n.hit||n.missed)continue;
+        const dt=n.at-t;
+        if(dt<-.23){n.missed=true;n.el.remove();misses++;combo=0;updateStats();continue;}
+        if(dt>1.75){n.el.style.display='none';continue;}
+        n.el.style.display='block';
+        const pos=lineY-20-Math.max(-.13,dt/1.70)*(lineY-20);
+        n.el.style.transform=`translateY(${pos}px)`;
+      }
+      const total=Number.isFinite(player.duration)?player.duration:35.814;
+      document.querySelector('#ry-progress-fill').style.width=`${Math.min(100,t/total*100)}%`;
+      document.querySelector('#ry-time').textContent=`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
+      if(performance.now()>feedbackUntil&&feedbackEl.textContent)feedbackEl.textContent='';
+      if(player.ended){finish();return;}
+      raf=requestAnimationFrame(frame);
+    }
+    function finish(){
+      if(finished)return;finished=true;playing=false;player.pause();cancelAnimationFrame(raf);markComplete('rhythm');
+      overlay.classList.add('hidden');pauseButton.disabled=true;
+      const grade=hits>=48?'Tá, você mandou bem.':hits>=24?'Passou. Não vou comentar os detalhes.':'Terminou. O importante é que tentou.';
+      document.querySelector('#ry-result').innerHTML=completionBlock('Música encerrada.',grade,'rhythm',`<p class="helper">${hits} de ${notes.length} notas acertadas · ${perfect} perfeitas · ${score.toLocaleString('pt-BR')} pontos</p>`);
+      attachCompletion('home','rhythm');
+    }
+    player.addEventListener('ended',finish);
+    document.querySelector('#ry-start').addEventListener('click',start);
+  }
+
+  // LABIRINTO: geração automática de caminhos.
+  function generateMaze(size=17) {
+    const grid=Array.from({length:size},()=>Array(size).fill(1));
+    const dirs=[[0,-2],[2,0],[0,2],[-2,0]];
+    const stack=[[1,1]];grid[1][1]=0;
+    while(stack.length){
+      const [x,y]=stack[stack.length-1];
+      const options=dirs.filter(([dx,dy])=>{const xx=x+dx,yy=y+dy;return xx>0&&yy>0&&xx<size-1&&yy<size-1&&grid[yy][xx]===1;});
+      if(!options.length){stack.pop();continue;}
+      const [dx,dy]=options[Math.floor(Math.random()*options.length)];
+      grid[y+dy/2][x+dx/2]=0;grid[y+dy][x+dx]=0;stack.push([x+dx,y+dy]);
+    }
+    return grid;
+  }
+  function renderMaze() {
+    gameFrame('maze',`<div class="stat-row"><div class="stat"><div class="stat-label">Tempo</div><strong id="maze-time">0:00</strong></div><div class="stat"><div class="stat-label">Passos</div><strong id="maze-steps">0</strong></div></div><div class="maze-layout"><div class="maze-canvas-wrap"><canvas class="maze-canvas" id="maze-canvas" width="560" height="560" role="img" aria-label="Labirinto com paredes, sua posição laranja e saída verde"></canvas></div><aside class="maze-info"><div><h3>Chegue até a saída.</h3><p>Use as setas ou <strong>W A S D</strong> no teclado. No celular, use os botões ou deslize o dedo pelo mapa.</p><div class="maze-legend"><span class="legend-marker">Você</span><span class="legend-marker exit">Saída</span></div><p id="maze-feedback" class="feedback" role="status" aria-live="polite"></p></div><div class="dpad" aria-label="Controles de direção"><button aria-label="Cima" class="up" data-dir="up">↑</button><button aria-label="Esquerda" class="left" data-dir="left">←</button><button aria-label="Baixo" class="down" data-dir="down">↓</button><button aria-label="Direita" class="right" data-dir="right">→</button></div></aside></div><div class="game-actions"><button id="maze-again" class="btn btn-ghost btn-small">Novo labirinto</button><span class="helper">Não tem limite de tempo. Calma, que não é vestibular.</span></div><div id="maze-result"></div>`);
+    const canvas=document.querySelector('#maze-canvas'),ctx=canvas.getContext('2d'),size=17;
+    let grid=generateMaze(size),x=1,y=1,steps=0,bumps=0,done=false,started=performance.now(),interval=null;
+    const end={x:size-2,y:size-2};
+    function draw() {
+      const s=canvas.width/size;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#1d1b25';ctx.fillRect(0,0,canvas.width,canvas.height);
+      for(let row=0;row<size;row++)for(let col=0;col<size;col++){
+        const xx=col*s,yy=row*s;
+        if(grid[row][col]){ctx.fillStyle='#615575';ctx.fillRect(xx+.8,yy+.8,s-1.6,s-1.6);ctx.fillStyle='#796b90';ctx.fillRect(xx+.8,yy+.8,s-2.2,3);}else{ctx.fillStyle='#282732';ctx.fillRect(xx,yy,s+.2,s+.2);}
+      }
+      ctx.fillStyle='#a0d6bc';ctx.fillRect(end.x*s+4,end.y*s+4,s-8,s-8);
+      ctx.strokeStyle='#d8ffea';ctx.strokeRect(end.x*s+7,end.y*s+7,s-14,s-14);
+      ctx.beginPath();ctx.arc((x+.5)*s,(y+.5)*s,s*.31,0,Math.PI*2);ctx.fillStyle='#f37b69';ctx.shadowColor='#f37b69';ctx.shadowBlur=17;ctx.fill();ctx.shadowBlur=0;
+      ctx.beginPath();ctx.arc((x+.5)*s,(y+.5)*s,s*.1,0,Math.PI*2);ctx.fillStyle='#fff8ee';ctx.fill();
+    }
+    const feedback=document.querySelector('#maze-feedback');
+    function move(dx,dy) {
+      if(done)return;
+      if(grid[y+dy]?.[x+dx]!==0){bumps++;if(bumps%4===0)feedback.textContent='Essa parede continua sendo uma parede.';return;}
+      x+=dx;y+=dy;steps++;document.querySelector('#maze-steps').textContent=steps;feedback.textContent='';draw();
+      if(x===end.x&&y===end.y){done=true;markComplete('maze');clearInterval(interval);
+        const elapsed=Math.floor((performance.now()-started)/1000);
+        document.querySelector('#maze-result').innerHTML=completionBlock('Você saiu!',`Foram ${steps} passos e ${Math.floor(elapsed/60)}m ${elapsed%60}s. O GPS está orgulhoso. Acho.`,'maze');attachCompletion('home','maze');
+      }
+    }
+    const dirMap={ArrowUp:[0,-1],ArrowDown:[0,1],ArrowLeft:[-1,0],ArrowRight:[1,0],w:[0,-1],s:[0,1],a:[-1,0],d:[1,0]};
+    const onKey=e=>{if(currentView!=='maze'||e.repeat||e.target.matches('input, textarea'))return;const v=dirMap[e.key];if(v){e.preventDefault();move(...v);}};
+    document.addEventListener('keydown',onKey);
+    const dirButtons={up:[0,-1],down:[0,1],left:[-1,0],right:[1,0]};
+    document.querySelectorAll('[data-dir]').forEach(b=>b.addEventListener('click',()=>move(...dirButtons[b.dataset.dir])));
+    document.querySelector('#maze-again').addEventListener('click',()=>go('maze'));
+    let touch=null;
+    canvas.addEventListener('touchstart',e=>{touch={x:e.changedTouches[0].clientX,y:e.changedTouches[0].clientY};},{passive:true});
+    canvas.addEventListener('touchend',e=>{if(!touch)return;const dx=e.changedTouches[0].clientX-touch.x,dy=e.changedTouches[0].clientY-touch.y;touch=null;if(Math.max(Math.abs(dx),Math.abs(dy))<20)return;if(Math.abs(dx)>Math.abs(dy))move(Math.sign(dx),0);else move(0,Math.sign(dy));},{passive:true});
+    interval=setInterval(()=>{
+      if(done)return;const sec=Math.floor((performance.now()-started)/1000);
+      document.querySelector('#maze-time').textContent=`${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}`;
+    },250);
+    cleanup=()=>{clearInterval(interval);document.removeEventListener('keydown',onKey);};
+    draw();
+  }
+
+  // ESCAPE ROOM: quatro mecânicas diferentes e nenhum cadeado numérico.
+  let escapeState=null;
+  function showDialog(title,html,setup) {
+    closeDialog();const layer=document.createElement('div');layer.className='dialog-layer';layer.id='dialog-layer';
+    layer.innerHTML=`<section class="dialog-box" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Fechar">×</button><h3 id="dialog-title">${title}</h3>${html}</section>`;
+    document.body.appendChild(layer);activeDialog=layer;
+    layer.addEventListener('click',e=>{if(e.target===layer||e.target.closest('.dialog-close'))closeDialog();});
+    if(setup)setup(layer);layer.querySelector('.dialog-close')?.focus();
+  }
+  function closeDialog(){if(activeDialog){activeDialog.remove();activeDialog=null;}}
+  function renderEscape() {
+    escapeState={tiles:[{kind:'corner',rot:3},{kind:'straight',rot:0},{kind:'corner',rot:1},{kind:'straight',rot:2},{kind:'corner',rot:2},{kind:'straight',rot:0},{kind:'straight',rot:1},{kind:'corner',rot:1},{kind:'straight',rot:0}],circuit:false,connected:[],powered:false,beam:false,angle:0,books:['◆','☾','★','✦','●','▲'],selectedBook:null,key:false,solved:false};
+    gameFrame('escape',`<div class="completion-banner hidden" id="esc-done">A porta abriu. Você saiu do quarto.</div><div class="escape-shell"><div class="esc-scene" id="esc-scene"><div class="room-photo" aria-hidden="true"></div><div class="room-glow" aria-hidden="true"></div>
+      <button class="hotspot" style="left:67.5%;top:18%" data-object="poster" data-name="Quadro" aria-label="Examinar quadro">+</button>
+      <button class="hotspot" style="left:28%;top:69%" data-object="memo" data-name="Bilhete" aria-label="Ler bilhete">+</button>
+      <button class="hotspot" style="left:43%;top:78%" data-object="drawer" data-name="Gaveta" aria-label="Abrir gaveta">+</button>
+      <button class="hotspot" style="left:51%;top:20%" data-object="cabinet" data-name="Estante" aria-label="Examinar estante">+</button>
+      <button class="hotspot" style="left:25.5%;top:45%" data-object="lamp" data-name="Luminária da mesa" aria-label="Examinar luminária da mesa">+</button>
+      <button class="hotspot" style="left:77%;top:47%" data-object="door" data-name="Porta" aria-label="Examinar porta">+</button>
+    </div><div class="escape-bottom"><div class="inventory" id="esc-inventory"></div></div><p class="helper">Toque nos <strong>+</strong> para investigar os objetos.</p><div id="esc-result"></div></div>`);
+    document.querySelectorAll('[data-object]').forEach(b=>b.addEventListener('click',()=>examine(b.dataset.object)));
+    updateInventory();cleanup=()=>closeDialog();
+  }
+  function updateInventory(){
+    const s=escapeState,el=document.querySelector('#esc-inventory');if(!el)return;
+    let items=[];if(s.circuit)items.push('bateria');if(s.powered)items.push('energia ligada');if(s.beam)items.push('estante iluminada');if(s.key)items.push('chave');
+    el.innerHTML=`Progresso do quarto: <strong>${items.length?items.join(' · '):'investigue os objetos'}</strong>`;
+  }
+  // Gaveta: peças físicas reais. A validação segue as conexões, não uma senha de rotações.
+  // 0 = norte, 1 = leste, 2 = sul, 3 = oeste.
+  function circuitPorts(tile) {
+    const base=tile.kind==='straight'?[0,2]:[0,1];
+    return base.map(d=>(d+tile.rot)%4);
+  }
+  function circuitPath(tiles) {
+    const visited=new Set();let at=0,enter=3;
+    for(let step=0;step<10;step++){
+      if(visited.has(at))return null;
+      visited.add(at);
+      const ports=circuitPorts(tiles[at]);
+      if(!ports.includes(enter))return null;
+      const out=ports.find(d=>d!==enter);
+      const row=Math.floor(at/3),col=at%3;
+      const nx=col+[0,1,0,-1][out],ny=row+[-1,0,1,0][out];
+      if(nx<0||nx>2||ny<0||ny>2){
+        return at===8&&out===1&&visited.size===9 ? visited : null;
+      }
+      const next=ny*3+nx,from=(out+2)%4;
+      if(!circuitPorts(tiles[next]).includes(from))return null;
+      at=next;enter=from;
+    }
+    return null;
+  }
+  function circuitPieceSvg(piece){
+    const path=piece.kind==='straight'?'M50 3 V97':'M50 3 V50 H97';
+    return `<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><g transform="rotate(${piece.rot*90} 50 50)"><path class="conduit-base" d="${path}"/><path class="conduit" d="${path}"/><circle class="conduit-center" cx="50" cy="50" r="11"/></g></svg>`;
+  }
+  function solveCircuit(){
+    const s=escapeState;
+    showDialog('Gaveta',`<p>Monte uma única conexão da <strong>entrada</strong> à <strong>saída</strong>, passando pelas nove peças.</p>
+      <p class="helper">Arraste peças para trocar de lugar, ou toque em duas. Use ↻ para girar cada uma.</p>
+      <div id="circuit-board" class="circuit-board" role="group" aria-label="Quebra-cabeça com nove peças de circuito móveis e giratórias"></div>
+      <p id="circuit-feedback" class="circuit-progress" role="status" aria-live="polite">Circuito desligado</p>`,layer=>{
+      const board=layer.querySelector('#circuit-board'),feedback=layer.querySelector('#circuit-feedback');
+      let selected=null,drag=null;
+      function finishIfConnected(){
+        if(!circuitPath(s.tiles))return false;
+        s.circuit=true;updateInventory();
+        showDialog('Gaveta aberta',`<p>O circuito fechou e liberou a gaveta.</p><p>Você encontrou uma <strong>bateria</strong>.</p>`);
+        return true;
+      }
+      function swapSlots(a,b){
+        if(a===b)return;
+        [s.tiles[a],s.tiles[b]]=[s.tiles[b],s.tiles[a]];
+        selected=null;
+        if(!finishIfConnected()){feedback.textContent='Circuito desligado';paint();}
+      }
+      function selectSlot(index){
+        if(selected===null){selected=index;feedback.textContent='Peça selecionada';paint();return;}
+        if(selected===index){selected=null;feedback.textContent='Circuito desligado';paint();return;}
+        swapSlots(selected,index);
+      }
+      function paint(){
+        board.innerHTML=s.tiles.map((piece,i)=>`<div class="circuit-slot ${selected===i?'is-selected':''}" data-slot="${i}">
+          ${i===0?'<span class="circuit-pin start">ENTRADA</span>':''}
+          ${i===8?'<span class="circuit-pin end">SAÍDA</span>':''}
+          <button class="circuit-piece" type="button" data-piece="${i}" aria-label="Selecionar e mover peça ${i+1}">${circuitPieceSvg(piece)}</button>
+          <button class="circuit-rotate" type="button" data-rotate="${i}" aria-label="Girar peça ${i+1} em 90 graus">↻</button></div>`).join('');
+      }
+      board.addEventListener('click',e=>{
+        const rot=e.target.closest('[data-rotate]');
+        if(rot){const i=Number(rot.dataset.rotate);s.tiles[i].rot=(s.tiles[i].rot+1)%4;
+          if(!finishIfConnected()){feedback.textContent='Circuito desligado';paint();}return;}
+      });
+      // Teclado: Enter/Espaço seleciona; o click sintético de toque não troca duas vezes.
+      board.addEventListener('keydown',e=>{
+        const piece=e.target.closest('[data-piece]');
+        if(piece&&(e.key==='Enter'||e.key===' ')){
+          e.preventDefault();selectSlot(Number(piece.dataset.piece));
+        }
+      });
+      board.addEventListener('pointerdown',e=>{
+        const piece=e.target.closest('[data-piece]');
+        if(!piece||e.button!==0)return;
+        const index=Number(piece.dataset.piece);
+        drag={pointer:e.pointerId,index,x:e.clientX,y:e.clientY,moved:false,ghost:null};
+        piece.setPointerCapture(e.pointerId);
+        e.preventDefault();
+      });
+      board.addEventListener('pointermove',e=>{
+        if(!drag||e.pointerId!==drag.pointer)return;
+        if(Math.hypot(e.clientX-drag.x,e.clientY-drag.y)>10){
+          drag.moved=true;
+          if(!drag.ghost){
+            drag.ghost=document.createElement('div');drag.ghost.className='circuit-piece-ghost';
+            drag.ghost.innerHTML=circuitPieceSvg(s.tiles[drag.index]);
+            const r=board.querySelector(`[data-piece="${drag.index}"]`).getBoundingClientRect();
+            drag.ghost.style.width=`${r.width}px`;drag.ghost.style.height=`${r.height}px`;
+            document.body.appendChild(drag.ghost);
+          }
+          drag.ghost.style.left=`${e.clientX}px`;drag.ghost.style.top=`${e.clientY}px`;
+          board.querySelectorAll('.drop-target').forEach(el=>el.classList.remove('drop-target'));
+          document.elementFromPoint(e.clientX,e.clientY)?.closest('.circuit-slot')?.classList.add('drop-target');
+        }
+      });
+      function endDrag(e){
+        if(!drag||e.pointerId!==drag.pointer)return;
+        const {index,moved,ghost}=drag;drag=null;
+        ghost?.remove();board.querySelectorAll('.drop-target').forEach(el=>el.classList.remove('drop-target'));
+        if(e.type==='pointercancel')return;
+        if(!moved){selectSlot(index);return;}
+        const target=document.elementFromPoint(e.clientX,e.clientY)?.closest('[data-slot]');
+        if(target&&board.contains(target))swapSlots(index,Number(target.dataset.slot));
+      }
+      board.addEventListener('pointerup',endDrag);
+      board.addEventListener('pointercancel',endDrag);
+      paint();
+    });
+  }
+  function solveWires(){
+    const s=escapeState;
+    if(!s.circuit){showDialog('Quadro',`<p>O quadro está solto. Atrás dele existe um painel de fios, mas falta uma bateria.</p>`);return;}
+    showDialog('Painel atrás do quadro',`<p>Conecte as cinco cores. Você pode começar por qualquer lado.</p><div class="wire-board" id="wire-board"><svg class="wire-lines" id="wire-lines" aria-hidden="true"></svg><div id="wire-left" class="wire-column"></div><div class="wire-bridges" id="wire-bridges"></div><div id="wire-right" class="wire-column"></div></div><div class="esc-error" id="wire-feedback" role="status"></div>`,layer=>{
+      const colors=[{id:'coral',name:'Coral',hex:'#f37b69'},{id:'violet',name:'Roxo',hex:'#a88cf5'},{id:'mint',name:'Verde',hex:'#a0d6bc'},{id:'gold',name:'Dourado',hex:'#e5c26b'},{id:'blue',name:'Azul',hex:'#6ca8ff'}];
+      const nameById=Object.fromEntries(colors.map(c=>[c.id,c]));
+      let selected=null;
+      const left=layer.querySelector('#wire-left'),right=layer.querySelector('#wire-right'),feedback=layer.querySelector('#wire-feedback'),bridges=layer.querySelector('#wire-bridges');
+      function drawWires(){
+        const box=layer.querySelector('#wire-board');const svg=layer.querySelector('#wire-lines');
+        if(!box||!box.isConnected)return;
+        const origin=box.getBoundingClientRect(),width=origin.width,height=origin.height;
+        svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
+        const paths=s.connected.map(id=>{
+          const from=left.querySelector(`[data-port="${id}"]`),to=right.querySelector(`[data-port="${id}"]`);
+          if(!from||!to)return '';
+          const a=from.getBoundingClientRect(),b=to.getBoundingClientRect();
+          const x1=a.right-origin.left-5,y1=a.top-origin.top+a.height/2;
+          const x2=b.left-origin.left+5,y2=b.top-origin.top+b.height/2;
+          return `<path class="wire-path" d="M ${x1} ${y1} C ${(x1+x2)/2} ${y1}, ${(x1+x2)/2} ${y2}, ${x2} ${y2}" stroke="${nameById[id].hex}" />`;
+        }).join('');
+        svg.innerHTML=paths;
+      }
+      function selectPort(side,id){
+        if(s.connected.includes(id))return;
+        if(!selected){selected={side,id};feedback.textContent=`${nameById[id].name} selecionado. Toque na mesma cor do outro lado.`;paint();return;}
+        if(selected.side===side){selected={side,id};feedback.textContent=`${nameById[id].name} selecionado. Toque no outro lado.`;paint();return;}
+        if(selected.id!==id){feedback.textContent='As duas pontas são de cores diferentes.';layer.querySelector('#wire-board').classList.remove('wrong-connection');void layer.querySelector('#wire-board').offsetWidth;layer.querySelector('#wire-board').classList.add('wrong-connection');return;}
+        s.connected.push(id);selected=null;feedback.textContent='Conexão feita.';
+        if(s.connected.length===5){s.powered=true;updateInventory();showDialog('Energia restaurada',`<p>Os cinco fios estão ligados. A luminária da mesa voltou a funcionar.</p><p>Por algum milagre, nada explodiu.</p>`);return;}
+        paint();
+      }
+      function paint(){
+        left.innerHTML=colors.map(c=>`<button class="wire-port ${selected?.side==='left'&&selected.id===c.id?'wire-selected':''} ${s.connected.includes(c.id)?'wire-connected':''}" data-port="${c.id}" style="--port:${c.hex}" ${s.connected.includes(c.id)?'disabled':''} aria-label="Selecionar ponta ${c.name} da esquerda"><i></i>${c.name}</button>`).join('');
+        right.innerHTML=[colors[3],colors[0],colors[4],colors[1],colors[2]].map(c=>`<button class="wire-port ${selected?.side==='right'&&selected.id===c.id?'wire-selected':''} ${s.connected.includes(c.id)?'wire-connected':''}" data-port="${c.id}" style="--port:${c.hex}" ${s.connected.includes(c.id)?'disabled':''} aria-label="Selecionar ponta ${c.name} da direita"><i></i>${c.name}</button>`).join('');
+        bridges.textContent=`${s.connected.length} / 5 fios`;
+        left.querySelectorAll('[data-port]').forEach(b=>b.addEventListener('click',()=>selectPort('left',b.dataset.port)));
+        right.querySelectorAll('[data-port]').forEach(b=>b.addEventListener('click',()=>selectPort('right',b.dataset.port)));
+        drawWires();
+      }
+      paint();
+    });
+  }
+  function aimLamp(){
+    const s=escapeState;
+    if(!s.powered){showDialog('Luminária da mesa',`<p>A luminária da mesa não liga. Parece estar sem energia.</p>`);return;}
+    if(s.beam){showDialog('Luminária da mesa',`<p>O feixe da luminária da mesa já está apontado para a estante. Há símbolos brilhando nas prateleiras.</p>`);return;}
+    showDialog('Luminária da mesa',`<p>Gire a luminária da mesa até a luz alcançar a estante, à direita da mesa.</p><div class="lamp-aim"><div class="lamp-art"><span id="lamp-ray" class="lamp-ray"></span><span class="lamp-base">◉</span><span class="lamp-target">▥<small>Estante</small></span></div><p id="lamp-direction" class="helper">Direção: para cima</p></div><div class="result-actions"><button id="lamp-rotate" class="btn btn-secondary">Girar 90° ↻</button><button id="lamp-shine" class="btn btn-primary">Acender</button></div><div id="lamp-feedback" class="esc-error" role="status"></div>`,layer=>{
+      const ray=layer.querySelector('#lamp-ray'),direction=layer.querySelector('#lamp-direction'),feedback=layer.querySelector('#lamp-feedback');
+      const directions=['para cima','para baixo','para a direita','para a esquerda'];
+      function paint(){ray.style.transform=`rotate(${[270,90,0,180][s.angle]}deg)`;direction.textContent=`Direção: ${directions[s.angle]}`;}
+      layer.querySelector('#lamp-rotate').addEventListener('click',()=>{s.angle=(s.angle+1)%4;paint();feedback.textContent='';});
+      layer.querySelector('#lamp-shine').addEventListener('click',()=>{
+        if(s.angle!==2){feedback.textContent='A luz não atingiu a estante. Ajuste a direção.';return;}
+        s.beam=true;updateInventory();showDialog('Estante iluminada',`<p>A luz revelou seis símbolos escondidos na madeira da estante.</p><div class="symbol-order">★　●　◆　▲　☾　✦</div><p>Agora o bilhete da mesa faz sentido.</p>`);
+      });paint();
+    });
+  }
+  function solveBooks(){
+    const s=escapeState;
+    if(!s.beam){showDialog('Estante',`<p>Há seis livros com símbolos nas capas, mas a fechadura parece reagir à luz.</p>`);return;}
+    if(s.key){showDialog('Estante',`<p>O compartimento já abriu. Você pegou a chave que estava escondida atrás dos livros.</p>`);return;}
+    showDialog('Estante',`<p>Os livros estão fora de ordem. Toque em um e depois em outro para trocar de lugar.</p><div class="books-target"><small>Inscrição iluminada:</small><strong>★　●　◆　▲　☾　✦</strong></div><div class="books-board" id="books-board" role="group" aria-label="Organizar livros por símbolos"></div><p id="books-feedback" class="esc-error" role="status"></p>`,layer=>{
+      const board=layer.querySelector('#books-board'),feedback=layer.querySelector('#books-feedback');
+      function paint(){
+        board.innerHTML=s.books.map((symbol,i)=>`<button class="symbol-book ${s.selectedBook===i?'book-selected':''}" data-book="${i}" aria-label="Livro com símbolo ${symbol}, posição ${i+1}">${symbol}</button>`).join('');
+        board.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>{
+          const i=Number(b.dataset.book);
+          if(s.selectedBook===null){s.selectedBook=i;feedback.textContent='Agora toque no livro que você quer trocar de lugar.';paint();return;}
+          [s.books[s.selectedBook],s.books[i]]=[s.books[i],s.books[s.selectedBook]];s.selectedBook=null;paint();
+          if(s.books.join('')==='★●◆▲☾✦'){
+            s.key=true;updateInventory();showDialog('Compartimento aberto',`<p>Os livros destravaram o fundo da estante. Atrás deles havia uma <strong>chave</strong>.</p><p>Bom. Só falta a parte em que você vai embora deste quarto.</p>`);
+          }
+        }));
+      }paint();
+    });
+  }
+  function examine(object){
+    const s=escapeState;if(!s||s.solved)return;
+    switch(object){
+      case 'memo':showDialog('Bilhete',`<p>Um papel com uma anotação:</p><div class="symbol-order">★　●　◆　▲　☾　✦</div><p>Há marcas de lápis nas bordas do papel, como se alguém tivesse testado várias ordens antes.</p>`);break;
+      case 'drawer':if(s.circuit)showDialog('Gaveta',`<p>A gaveta já está aberta. A bateria estava aqui.</p>`);else solveCircuit();break;
+      case 'poster':if(s.powered)showDialog('Quadro',`<p>O painel já está conectado. A luz da mesa funciona.</p>`);else solveWires();break;
+      case 'lamp':aimLamp();break;
+      case 'cabinet':solveBooks();break;
+      case 'door':
+        if(!s.key){showDialog('Porta',`<p>Está trancada com uma fechadura comum. Finalmente alguma coisa que faz sentido.</p>`);break;}
+        s.solved=true;markComplete('escape');
+        document.querySelector('#esc-done').classList.remove('hidden');
+        document.querySelectorAll('.hotspot').forEach(b=>{b.disabled=true;b.style.opacity='.45';});
+        document.querySelector('#esc-result').innerHTML=completionBlock('Porta aberta.','Boa, pirralha. Você conseguiu sair. Sem chutar nenhuma fechadura.','escape');attachCompletion('home','escape');
+        break;
+    }
+  }
+
+  function renderFinal() {
+    if(!allDone()){go('home');return;}
+    const particles=Array.from({length:29},(_,i)=>`<span class="confetti" aria-hidden="true" style="--x:${(i*73)%100}%;--color:${['#f37b69','#a88cf5','#a0d6bc','#e8d9c2'][i%4]};--rot:${i*37}deg;--delay:${(i%9)*.12}s;--duration:${3.3+(i%4)*.45}s"></span>`).join('');
+    shell(`<section class="final-wrap">${particles}<span class="eyebrow">Os três jogos concluídos</span><h1 class="final-title">Feliz aniversário, Alice.</h1><div class="final-message"><p>14 anos. Parabéns por sobreviver a mais um ano sendo você. Não deve ser fácil para as pessoas ao seu redor, mas seguimos firmes.</p><p>Brincadeiras à parte, espero que esse novo ano seja cheio de coisas boas, de momentos divertidos e de tudo aquilo que te faça feliz. Você merece.</p><p>Eu poderia escrever um texto enorme e sentimental, mas a gente sabe que eu ia te zoar no meio de qualquer jeito.</p><p>Então é isso: aproveita muito seu dia. E pode contar comigo, mesmo quando estiver sendo insuportável.</p><p class="final-sign">Feliz 14 anos, pirralha.<br>— Seu irmão</p></div><div class="final-tools"><button class="btn btn-primary" id="final-home">Voltar aos jogos</button><button class="btn btn-secondary" id="final-copy">Copiar mensagem</button><button class="btn btn-ghost" id="final-reset">Recomeçar tudo</button></div><p id="copy-feedback" class="helper" aria-live="polite"></p></section>`);
+    document.querySelector('#final-home').addEventListener('click',()=>go('home'));
+    document.querySelector('#final-copy').addEventListener('click',async()=>{
+      const text=`Feliz aniversário, Alice!\n\n14 anos. Parabéns por sobreviver a mais um ano sendo você. Não deve ser fácil para as pessoas ao seu redor, mas seguimos firmes.\n\nBrincadeiras à parte, espero que esse novo ano seja cheio de coisas boas, de momentos divertidos e de tudo aquilo que te faça feliz. Você merece.\n\nEu poderia escrever um texto enorme e sentimental, mas a gente sabe que eu ia te zoar no meio de qualquer jeito.\n\nEntão é isso: aproveita muito seu dia. E pode contar comigo, mesmo quando estiver sendo insuportável.\n\nFeliz 14 anos, pirralha.\n— Seu irmão`;
+      try {await navigator.clipboard.writeText(text);document.querySelector('#copy-feedback').textContent='Mensagem copiada.';} catch {document.querySelector('#copy-feedback').textContent='Não foi possível copiar automaticamente neste navegador.';}
+    });
+    document.querySelector('#final-reset').addEventListener('click',()=>{
+      showDialog('Recomeçar os jogos?',`<p>Isso apaga o progresso salvo neste aparelho e volta a bloquear a mensagem final.</p><div class="result-actions"><button class="btn btn-primary" id="confirm-reset">Sim, recomeçar</button><button class="btn btn-secondary" id="cancel-reset">Cancelar</button></div>`,layer=>{
+        layer.querySelector('#confirm-reset').addEventListener('click',()=>{completed={rhythm:false,maze:false,escape:false};saveProgress();closeDialog();go('home');});
+        layer.querySelector('#cancel-reset').addEventListener('click',closeDialog);
+      });
+    });
+  }
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&activeDialog)closeDialog();});
+  go('home');
+})();
+
+</script>
+</body>
+</html>
